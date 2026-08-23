@@ -8,7 +8,7 @@
   Jianfa Ma<sup>3</sup>,
   Bang Du<sup>4</sup>,
   Tiantian Zhang<sup>1</sup>,
-  <a href="https://web.ee.tsinghua.edu.cn/wangxueqian/en/index.htm">Xueqian Wang</a><sup>1,&dagger;</sup>,
+  <a href="https://scholar.google.com/citations?user=h9dN_ykAAAAJ&hl=zh-CN">Xueqian Wang</a><sup>1,&dagger;</sup>,
   <a href="https://robotics-star.com/people">Boyu Zhou</a><sup>2,5,&dagger;</sup>
 </p>
 
