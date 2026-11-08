@@ -1,0 +1,14 @@
+{
+  "fuel_ws": {
+    "url": "https://github.com/Goolo2/fuel_ws",
+    "commit": "646473cb256af5aacb57f0eb4a49b3b03dcf30e7"
+  },
+  "3dmem": {
+    "url": "https://github.com/Goolo2/3dmem",
+    "commit": "e0eb01c13f82baf9d3112a9bbfcaee6c41675da0"
+  },
+  "sop_solver": {
+    "url": "https://github.com/HKUST-Aerial-Robotics/FALCON",
+    "commit": "312eb4d32c6c7af1a482f94a0a204aa2bb150cca"
+  }
+}

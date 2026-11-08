@@ -1,0 +1,25 @@
+name: airhunt
+channels:
+  - robostack-staging
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy=1.26.4
+  - opencv=4.10
+  - cmake
+  - make
+  - cxx-compiler
+  - pkg-config
+  - catkin_tools
+  - ros-noetic-ros-base
+  - ros-noetic-cv-bridge
+  - ros-noetic-tf
+  - ros-noetic-tf2-ros
+  - ros-noetic-message-generation
+  - ros-noetic-message-runtime
+  - ros-noetic-visualization-msgs
+  - pcl=1.14
+  - eigen
+  - nlopt
+  - ffmpeg

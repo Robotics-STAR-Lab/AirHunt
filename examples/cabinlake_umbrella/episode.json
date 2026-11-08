@@ -1,0 +1,30 @@
+{
+  "episode_id": 6,
+  "start_position": [
+    -151.85694583532245,
+    186.91640980280002,
+    -3.0
+  ],
+  "start_yaw": -1.4509835457421316,
+  "start_rotation": [
+    0,
+    0,
+    -0.6635034541717237,
+    0.7481732194500089
+  ],
+  "goals": [
+    {
+      "object_id": "umbrella_1_difficult",
+      "object_class": "umbrella",
+      "query": "Find the large red-and-white beach umbrella beside the water.",
+      "task_type": "object_navigation",
+      "target_position": [
+        -150,
+        167,
+        -1
+      ]
+    }
+  ],
+  "source_episode_id": 6,
+  "example_variant": "18m fixed-start beach-facing short-range navigation demonstration"
+}

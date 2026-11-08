@@ -1,0 +1,175 @@
+{
+  "SettingsVersion": 1.2,
+  "SimMode": "ComputerVision",
+  "DefaultVehicleConfig": "",
+  "PhysicsEngineName": "",
+  "RpcEnabled": true,
+  "SyncMode": {
+    "Enabled": true,
+    "StepSize": 0.01
+  },
+  "CameraDefaults": {
+    "CaptureSettings": [
+      {
+        "ImageType": 0,
+        "Width": 640,
+        "Height": 480,
+        "FOV_Degrees": 80,
+        "AutoExposureSpeed": 100,
+        "AutoExposureBias": 0,
+        "AutoExposureMaxBrightness": 0.64,
+        "AutoExposureMinBrightness": 0.03,
+        "MotionBlurAmount": 0,
+        "TargetGamma": 1.0
+      }
+    ]
+  },
+  "Vehicles": {
+    "drone_1": {
+      "VehicleType": "ComputerVision",
+      "DefaultVehicleState": "Armed",
+      "EnableCollisionPassthrogh": true,
+      "UsePhysics": false,
+      "EnableCollisions": true,
+      "RC": {
+        "RemoteControlID": -1,
+        "AllowAPIWhenDisconnected": false
+      },
+      "Cameras": {
+        "front_camera": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 480,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.0,
+              "Enabled": false
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 0
+        },
+        "right_camera": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 480,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.0,
+              "Enabled": false
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 90
+        },
+        "left_camera": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 480,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.0,
+              "Enabled": false
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": -90
+        },
+        "front_camera_depth_type2": {
+          "CaptureSettings": [
+            {
+              "ImageType": 2,
+              "Width": 480,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.0,
+              "Enabled": true
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 0
+        },
+        "front_camera_depth": {
+          "CaptureSettings": [
+            {
+              "ImageType": 1,
+              "Width": 480,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.0,
+              "Enabled": false
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 0
+        },
+        "right_camera_depth": {
+          "CaptureSettings": [
+            {
+              "ImageType": 1,
+              "Width": 480,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.0,
+              "Enabled": false
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 90
+        },
+        "left_camera_depth": {
+          "CaptureSettings": [
+            {
+              "ImageType": 1,
+              "Width": 480,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.0,
+              "Enabled": false
+            }
+          ],
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": -90
+        }
+      }
+    }
+  },
+  "OriginGeopoint": {
+    "Latitude": 69.61468,
+    "Longitude": -126.0,
+    "Altitude": 0
+  },
+  "LocalHostIp": "127.0.0.1",
+  "ApiServerPort": 41451
+}

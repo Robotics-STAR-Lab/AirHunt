@@ -1,0 +1,10 @@
+<package format="2">
+  <name>quadrotor_msgs</name><version>0.1.0</version>
+  <description>Position command message used by AirHunt</description>
+  <maintainer email="1243566178@qq.com">Goolo2</maintainer>
+  <license>See source file license notices</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <depend>std_msgs</depend><depend>geometry_msgs</depend>
+  <exec_depend>message_runtime</exec_depend>
+</package>

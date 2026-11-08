@@ -1,0 +1,6 @@
+Source: https://github.com/HKUST-Aerial-Robotics/FALCON
+Commit: 312eb4d32c6c7af1a482f94a0a204aa2bb150cca
+Original path: falcon_planner/exploration_utils/{include,src}/sop_solver
+Original solver credited by AirHunt: https://github.com/rod409/SOP
+Local changes: fractional-second budget and capture best cost before clear.
+Cleanup: unused file/tour helpers and debug comments removed from the interface; graph construction, precedence preprocessing and solver calls retained.

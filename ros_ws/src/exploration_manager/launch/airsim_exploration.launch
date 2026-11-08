@@ -1,0 +1,55 @@
+<launch>
+  <arg name="init_x" default="64.14" />
+  <arg name="init_y" default="2.79" />
+  <arg name="init_z" default="2.0" />
+  <arg name="init_yaw" default="0.10" />
+  <arg name="map_size_x" value="200.0" />
+  <arg name="map_size_y" value="200.0" />
+  <arg name="map_size_z" value=" 10.0" />
+  <arg name="odom_topic" value="/simulator/odom" />
+  <include file="$(find exploration_manager)/launch/airsim_algorithm.xml">
+    <arg name="map_size_x_" value="$(arg map_size_x)" />
+    <arg name="map_size_y_" value="$(arg map_size_y)" />
+    <arg name="map_size_z_" value="$(arg map_size_z)" />
+    <arg name="init_x" value="$(arg init_x)" />
+    <arg name="init_y" value="$(arg init_y)" />
+    <arg name="init_z" value="$(arg init_z)" />
+    <arg name="box_min_x" value="$(eval arg('init_x') - 70.0)" />
+    <arg name="box_min_y" value="$(eval arg('init_y') - 70.0)" />
+    <arg name="box_min_z" value="$(eval arg('init_z') - 2.0)" />
+    <arg name="box_max_x" value="$(eval arg('init_x') + 70.0)" />
+    <arg name="box_max_y" value="$(eval arg('init_y') + 70.0)" />
+    <arg name="box_max_z" value="$(eval arg('init_z') + 2.0)" />
+    <arg name="odometry_topic" value="$(arg odom_topic)" />
+    <arg name="sensor_pose_topic" value="/camera/front/pose" />
+    <arg name="depth_topic" value="/camera/front/depth" />
+    <arg name="cloud_topic" value="/test" />
+    <arg name="cx" value="240" />
+    <arg name="cy" value="240" />
+    <arg name="fx" value="240" />
+    <arg name="fy" value="240" />
+    <arg name="max_vel" value="2.0" />
+    <arg name="max_acc" value="2.0" />
+  </include>
+  <node pkg="plan_manage" name="traj_server" type="traj_server" output="screen">
+    <remap from="/position_cmd" to="planning/pos_cmd" />
+    <remap from="/odom_world" to="$(arg odom_topic)" />
+    <param name="traj_server/time_forward" value="1.5" type="double" />
+    <param name="traj_server/pub_traj_id" value="4" type="int" />
+    <param name="traj_server/init_x" value="$(arg init_x)" type="double" />
+    <param name="traj_server/init_y" value="$(arg init_y)" type="double" />
+    <param name="traj_server/init_z" value="$(arg init_z)" type="double" />
+    <param name="traj_server/init_yaw" value="$(arg init_yaw)" type="double" />
+    <param name="perception_utils/top_angle" value="0.56125" type="double" />
+    <param name="perception_utils/left_angle" value="0.69222" type="double" />
+    <param name="perception_utils/right_angle" value="0.68901" type="double" />
+    <param name="perception_utils/max_dist" value="4.5" type="double" />
+    <param name="perception_utils/vis_dist" value="1.0" type="double" />
+  </node>
+  <node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
+    <remap from="~odom" to="$(arg odom_topic)" />
+    <remap from="~goal" to="/move_base_simple/goal" />
+    <remap from="~traj_start_trigger" to="/traj_start_trigger" />
+    <param name="waypoint_type" value="point" />
+  </node>
+</launch>

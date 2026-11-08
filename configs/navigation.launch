@@ -1,0 +1,24 @@
+<launch>
+  <node pkg="airhunt_bridge" type="sensor_bridge.py" name="airsim_ros_bridge" output="screen" />
+  <arg name="depth_scale" default="1.00117325" />
+  <arg name="local_scene" default="false" />
+  <arg name="init_x" default="-1.04" />
+  <arg name="init_y" default="11.68" />
+  <arg name="init_z" default="2.0" />
+  <arg name="init_yaw" default="0.0" />
+  <include file="$(find exploration_manager)/launch/airsim_exploration.launch">
+    <arg name="init_x" value="$(arg init_x)" />
+    <arg name="init_y" value="$(arg init_y)" />
+    <arg name="init_z" value="$(arg init_z)" />
+    <arg name="init_yaw" value="$(arg init_yaw)" />
+  </include>
+  <param name="/airsim_ros_bridge/depth_scale" value="$(arg depth_scale)" />
+  <node pkg="pose_controller" type="pose_controller" name="pose_controller" output="screen">
+    <remap from="~odom" to="/simulator/odom" />
+    <remap from="~position_cmd" to="/planning/pos_cmd" />
+    <param name="init_state_x" value="$(arg init_x)" />
+    <param name="init_state_y" value="$(arg init_y)" />
+    <param name="init_state_z" value="$(arg init_z)" />
+    <param name="init_state_yaw" value="$(arg init_yaw)" />
+  </node>
+</launch>

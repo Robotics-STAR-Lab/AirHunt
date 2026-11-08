@@ -1,0 +1,11 @@
+<package format="2">
+  <name>pose_controller</name>
+  <version>0.1.0</version>
+  <description>AirHunt runtime pose_controller</description>
+  <maintainer email="1243566178@qq.com">Goolo2</maintainer>
+  <license>See source file license notices</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>nav_msgs</depend>
+  <depend>quadrotor_msgs</depend>
+</package>

@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(airhunt_bridge)
+set(CMAKE_CXX_STANDARD 14)
+find_package(catkin REQUIRED COMPONENTS rospy sensor_msgs geometry_msgs nav_msgs std_msgs cv_bridge message_filters)
+find_package(Eigen3 REQUIRED)
+catkin_package()
+include_directories(${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS})
